@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+:root{
+  --background: #222226;
+  --card: #0C0C0D;
+  --primary: #7155D9;
+  --secondary: #242873;
+  --accent: #07D962;
+  --text: #fafafa;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: var(--card);
 }
 
-.App-link {
-  color: #61dafb;
+.card{
+  background: var(--background);
+  padding: 20px;
+  border-radius: 5px;
+  color: var(--text);
+  width: 100vw;
+  max-width: 500px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1{
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+h2, h3 {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+input[type="date"]{
+  padding: 20px;
+  width: 100vw;
+  max-width: 500px;
+  border: 1px solid var(--background);
+  border-radius: 5px;
+  background: var(--background);
+  color: var(--text);
+  font-size: 1.2rem;
+  color-scheme: dark;
+  margin-top: 5px;
+  transition: 300ms;
+}
+
+input[type="date"]:focus{
+  outline: none;
+  border-color: var(--accent);
+  background-color: var(--card);
+  transition: 300ms;
 }
