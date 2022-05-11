@@ -43,7 +43,7 @@ export default function App() {
     <div className='card'>
       <h1>{state.selected_date.toDateString()}</h1>
       <h2>{"Data juliano: " + state.converted_date}</h2>
-      <h2>{"Dia juliano: " + state.day_count}</h2>
+      <h2>{"Contagem dias: " + state.day_count}</h2>
     </div>
     <input type={'date'} onChange={e => { handleDate(e.target.value) }}></input>
   </div>
